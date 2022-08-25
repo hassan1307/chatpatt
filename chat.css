@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0.9vw;
+    background: none;
+    height: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: -webkit-linear-gradient(transparent, #00c6ff);
+    background: linear-gradient(transparent, #00c6ff);
+    border-radius: 20px;
+    transition: all 3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: -webkit-linear-gradient(transparent, #00c6ff);
+    background: linear-gradient(transparent, #00c6ff);
+}
+
+main {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    background-image: url("new_background.jpg");
+}
+
+.chat-screen {
+    height: 100%;
+    width: 50vw;
+    color: white;
+    object-fit: cover;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 1rem;
+}
+
+
+
+.message-panel .text p {
+    word-break: break-all;
+}
+
+
+.message {
+    display: flex;
+    align-items: center;
+}
+
+.message-panel p {
+    color: gray;
+    font-size: 0.6rem;
+    position: relative;
+    right: 0;
+}
+
+.img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-right: 20px;
+    clip-path: circle();
+}
+
+.message-panel {
+    display: flex;
+    flex-direction: column;
+    background-color: #059862;
+    font-weight: 500;
+    padding: 0.2rem 1rem;
+    border-radius: 24px;
+    max-width: max-content;
+    margin-top: 0.7rem;
+}
+
+.current-user {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.6rem;
+    margin-top: 1rem;
+    background-color: white;
+    color: black;
+    padding: 0.2rem 1rem;
+    border-radius: 24px;
+    margin-left: auto;
+    max-width: max-content;
+}
+
+.current-user .img {
+    order: 2;
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.current-user .text p {
+    color: black;
+    font-size: 0.6rem;
+    word-break: break-all;
+
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+}
+
+.text p {
+    color: white;
+    word-break: break-all;
+}
+
+.img-text {
+    display: flex;
+}
+
+form {
+    /* position: fixed; */
+    /* width: 100%;
+    bottom: 100px; */
+    display: flex;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5rem
+}
+
+form button {
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none
+}
+
+@media only screen and (max-width:600px) {
+    main {
+        height: 100vh;
+    }
+
+    .chat-screen {
+        width: 100vw;
+        height: calc(100vh-66px);
+    }
+}
